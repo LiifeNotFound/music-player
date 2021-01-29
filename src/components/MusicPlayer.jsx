@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./MusicPlayer.css";
 import Image from "../resources/album_cover_example.jpg";
+import Play from "../resources/play-solid.svg";
+import Pause from "../resources/pause-solid.svg";
+import Forward from "../resources/forward-solid.svg";
+import Backward from "../resources/backward-solid.svg";
 
 class MusicPlayer extends Component {
 	constructor(props) {
@@ -25,13 +29,12 @@ export default (props) => (
 					<div className="circle"></div>
 				</div>
 				<div className="music-controls">
-					<div className="control-back"></div>
-					<div className="control-play-pause">
-						<i class="fas fa-play"></i>
-					</div>
-					<div className="control-next"></div>
+					<img src={Backward} />
+					<img src={Play} />
+					<img src={Forward} />
 				</div>
 			</div>
+			<h5 id='creator'>By @Liife_not_found</h5>
 		</div>
 	</div>
 );

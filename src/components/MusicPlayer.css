@@ -1,10 +1,12 @@
 html {
 	--circle-position: 21%;
 	--controls-size: 50px;
+	--card-padding-under-img: 1rem;
 }
 
 .card-container {
 	width: 500px;
+	transition: all 1s;
 	height: 80vh;
 	display: flex;
 	justify-content: center;
@@ -16,6 +18,7 @@ html {
 	position: absolute;
 	padding: 2rem;
 	width: 100%;
+    transition: all 0.5s;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(2rem);
@@ -30,15 +33,19 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.5s;
 	overflow: hidden;
 }
 
 .image-conteiner img {
-	width: 150%;
+	flex-shrink: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
-.music-info-conteiner h5 {
+.music-info-conteiner h5,h5 {
 	color: rgba(255, 255, 255, 0.5);
+	transition: all 0.3s;
 }
 .music-info-conteiner h3 {
 	color: rgb(241, 241, 241);
@@ -46,8 +53,10 @@ html {
 	overflow: hidden;
 	max-lines: 2;
 	font-weight: 500;
+	transition: all 0.3s;
 }
 .music-info-conteiner h4 {
+	transition: all 0.3s;
 	font-weight: 400;
 	color: rgb(241, 241, 241);
 }
@@ -69,8 +78,8 @@ html {
 }
 .circle {
 	width: 15px;
-    height: 15px;
-    border-radius: 50%;
+	height: 15px;
+	border-radius: 50%;
 	background-color: rgb(255, 255, 255);
 }
 .music-progress-bar .circle {
@@ -93,10 +102,64 @@ html {
 	cursor: pointer;
 }
 
-.control-back,
-.control-play-pause,
-.control-next{
-    width: var(--controls-size);
-    height:var(--controls-size);
-    color: #fff;
+.music-controls {
+	padding: 2rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: transparent;
+}
+
+.music-controls img {
+	width: 40px;
+	transition: all 0.2s;
+}
+
+.music-controls img:hover {
+	width: 40px;
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.music-controls img:active {
+	transform: scale(1);
+}
+#creator{
+    text-align: center;
+}
+
+@media (max-width: 512px) {
+	.card-container {
+		width: 350px;
+		height: 70vh;
+	}
+	.music-info-conteiner h3 {
+		font-size: 0.937rem;
+	}
+	.music-info-conteiner h4 {
+		font-size: 0.625rem;
+	}
+	.image-conteiner {
+		height: 350px;
+	}
+}
+@media (max-width: 375px) {
+   .card-container {
+		width: 290px;
+		height: 60vh;
+	}
+	.music-info-conteiner h3 {
+		font-size: 0.937rem;
+	}
+	.music-info-conteiner h4 {
+		font-size: 0.625rem;
+	}
+	.image-conteiner {
+		height: 330px;
+    }
+    .card{
+        padding: 1rem;
+    }
+    .under-img {
+        margin: 0;
+    }
 }

@@ -4,15 +4,13 @@
   box-sizing: border-box;
 }
 
-html{
-  --card-padding-under-img: 1rem;
-}
+
 
 body {
   height: 100vh;
   background: url('./resources/bg.jpg');
   background-size: cover;
-  backdrop-filter: blur(.7rem);
+  backdrop-filter: blur(2rem);
   display: flex;
   justify-content: center;
   align-items: center;
