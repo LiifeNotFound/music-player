@@ -1,0 +1,102 @@
+html {
+	--circle-position: 21%;
+	--controls-size: 50px;
+}
+
+.card-container {
+	width: 500px;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.card {
+	position: absolute;
+	padding: 2rem;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(2rem);
+	border-radius: 2rem;
+}
+
+.image-conteiner {
+	width: 100%;
+	height: 400px;
+	background: rgb(0, 0, 0);
+	border-radius: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.image-conteiner img {
+	width: 150%;
+}
+
+.music-info-conteiner h5 {
+	color: rgba(255, 255, 255, 0.5);
+}
+.music-info-conteiner h3 {
+	color: rgb(241, 241, 241);
+	max-width: 310px;
+	overflow: hidden;
+	max-lines: 2;
+	font-weight: 500;
+}
+.music-info-conteiner h4 {
+	font-weight: 400;
+	color: rgb(241, 241, 241);
+}
+.music-info-conteiner {
+	margin: 1rem 0;
+}
+.under-img {
+	margin: 1rem 0;
+	padding: var(--card-padding-under-img);
+}
+.music-progress-bar {
+	width: 100%;
+	height: 4px;
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);
+	display: flex;
+	border-radius: 1rem;
+	align-items: center;
+}
+.circle {
+	width: 15px;
+    height: 15px;
+    border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+}
+.music-progress-bar .circle {
+	transition: all 0.3s;
+	left: var(--circle-position);
+	position: absolute;
+}
+.music-progress-bar::after {
+	content: "";
+	overflow: hidden;
+	background-color: white;
+	display: absolute;
+	width: calc(var(--circle-position));
+	height: 4px;
+	border-radius: 1rem;
+}
+
+.music-progress-bar .circle:hover {
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+.control-back,
+.control-play-pause,
+.control-next{
+    width: var(--controls-size);
+    height:var(--controls-size);
+    color: #fff;
+}
