@@ -4,13 +4,18 @@
   box-sizing: border-box;
 }
 
-
+html, 
+body {
+    height: 100%;
+}
 
 body {
-  height: 100vh;
   background: url('./resources/bg.jpg');
   background-size: cover;
   backdrop-filter: blur(2rem);
+  width: 100%;
+  min-height: 600px;
+  min-width: 295px;
   display: flex;
   justify-content: center;
   align-items: center;

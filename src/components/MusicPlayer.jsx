@@ -34,7 +34,6 @@ export default (props) => (
 					<img src={Forward} />
 				</div>
 			</div>
-			<h5 id='creator'>By @Liife_not_found</h5>
 		</div>
 	</div>
 );

@@ -6,8 +6,10 @@ html {
 
 .card-container {
 	width: 500px;
-	transition: all 1s;
+	transition: all .3s;
 	height: 80vh;
+	min-height: 600px;
+	max-height: 730px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
